@@ -1,0 +1,29 @@
+.homeprdouct-container {
+  margin-top: 0.3rem;
+  /* border: 1px solid gray; */
+  padding: 0.5rem 0;
+}
+#homeproduct-top {
+  /* border: 1px solid green; */
+  padding: 0.5rem;
+}
+#homeproduct-bottom > img {
+  height: 50px;
+  padding: 0.5rem;
+}
+.homeproduct-bottom-container {
+  display: flex;
+}
+#homeproduct-bottom {
+    width: 150px;
+    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5rem;
+  border: 1px solid rgb(188, 188, 188);
+}
+#homeproduct-bottom > h5 {
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}

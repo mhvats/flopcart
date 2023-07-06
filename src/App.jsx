@@ -1,8 +1,12 @@
 import { NavMenu } from "./components/navbar/Navmenu";
 import { Category } from "./components/cateogry/Cateogry";
-import { Footer } from "./components/footer/Footer";
+// import { Footer } from "./components/footer/Footer";
+import { HomeProduct } from "./components/cateogry/HomeProduct";
 import "./App.css";
 import { cateogryData } from "./api/cateogryData";
+import { HomeProductMobile } from "./api/HomeProductMobile";
+import { HomeProductElectornics } from "./api/HomeProductElectornics";
+import { HomeProductClothing } from "./api/HomeProductClothing";
 export const App = () => {
   const renderCategory = cateogryData.map((item) => {
     return (
@@ -14,7 +18,6 @@ export const App = () => {
       />
     );
   });
-
   return (
     <>
       <div>
@@ -29,9 +32,18 @@ export const App = () => {
         >
           {renderCategory}
         </div>
-        <div style={{ position: "absolute", bottom: "0" }}>
+        {/* <div style={{ position: "absolute", bottom: "0"}}>
           <Footer />
-        </div>
+        </div> */}
+        <HomeProduct heading="Best Of Fashion" products={HomeProductClothing} />
+        <HomeProduct
+          heading="Best Of Mobile Phones"
+          products={HomeProductMobile}
+        />
+        <HomeProduct
+          heading="Best Of Electornics"
+          products={HomeProductElectornics}
+        />
       </div>
     </>
   );
