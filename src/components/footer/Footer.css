@@ -1,0 +1,16 @@
+.footer-container{
+    display: flex;
+}
+.footer-left {
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-items {
+  padding: 0.3rem;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
