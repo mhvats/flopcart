@@ -1,14 +1,23 @@
 import "./HomeProduct.css";
 // import { HomeProductElectornics } from "../../api/HomeProductElectornics";
 import { HomeProductBottom } from "./HomeProductBottom";
-export const HomeProduct = ({ heading, products }) => {
+// import { HomeProductBottomChild } from "./HomeProductBottomChild";
+export const HomeProduct = ({
+  heading,
+  products,
+  handleStateChange,
+  handleHomeProductChildState,
+}) => {
   const renderHomeProduct = products.map((item) => {
     return (
       <HomeProductBottom
         key={item.id}
+        id={item.id}
         price={item.price}
         title={item.title}
         img={item.img}
+        handleStateChange={handleStateChange}
+        handleHomeProductChildState={handleHomeProductChildState}
       />
     );
   });

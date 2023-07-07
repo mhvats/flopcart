@@ -15,8 +15,9 @@
   display: flex;
 }
 #homeproduct-bottom {
-    width: 150px;
-    border-radius: 10px;
+  cursor: pointer;
+  width: 150px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;

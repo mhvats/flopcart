@@ -2,7 +2,14 @@ import { useState } from "react";
 import "./NavMenu.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
-export const NavMenu = () => {
+export const NavMenu = ({ handleStateChange, stateChange }) => {
+  const handleStateChangeRef = () => {
+    if (stateChange === true) {
+      return;
+    } else {
+      handleStateChange();
+    }
+  };
   const [navmenuSearchProduct, setNavmenuSearchProduct] = useState("");
   const handleClick = (e) => {
     e.stopPropagation();
@@ -12,7 +19,7 @@ export const NavMenu = () => {
   return (
     <div className="navmenu-container">
       <div className="navmenu-left">
-        <div className="left" id="left-1">
+        <div className="left" id="left-1" onClick={handleStateChangeRef}>
           <h1>FlopCart</h1>
         </div>
         <div className="left" id="left-2">
